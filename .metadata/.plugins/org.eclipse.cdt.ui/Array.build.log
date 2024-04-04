@@ -1,0 +1,20 @@
+17:16:07 **** Incremental Build of configuration Debug for project Array ****
+make -j20 all 
+arm-none-eabi-gcc "../Core/Drv/darray/darray.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32H750xx -c -I../Core/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../Drivers/CMSIS/Include -I"D:/plante/STM_STMCUBEIDE/H750/Book_1/Array/Core/Drv/darray" -Og -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Drv/darray/darray.d" -MT"Core/Drv/darray/darray.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Drv/darray/darray.o"
+../Core/Drv/darray/darray.c:24:15: warning: 'create_int_array' defined but not used [-Wunused-function]
+   24 | static void** create_int_array(void* p_vArg)
+      |               ^~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "Array.elf" @"objects.list"   -mcpu=cortex-m7 -T"D:\plante\STM_STMCUBEIDE\H750\Book_1\Array\STM32H750VBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Array.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Array.elf
+ 
+arm-none-eabi-size  Array.elf 
+arm-none-eabi-objdump -h -S Array.elf  > "Array.list"
+   text	   data	    bss	    dec	    hex	filename
+   5992	     16	   1568	   7576	   1d98	Array.elf
+Finished building: default.size.stdout
+ 
+Finished building: Array.list
+ 
+
+17:16:07 Build Finished. 0 errors, 1 warnings. (took 344ms)
+

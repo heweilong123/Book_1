@@ -1,0 +1,2 @@
+../Core/Drv/darray/darray.c:53:5:darray_create	5
+../Core/Drv/darray/darray.c:89:5:darray_destory	3
