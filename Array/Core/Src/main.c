@@ -92,9 +92,6 @@ int main(void)
   MX_GPIO_Init();
   /* USER CODE BEGIN 2 */
   HAL_GPIO_WritePin(LED_R_GPIO_Port, LED_R_Pin, SET);
-  HAL_GPIO_WritePin(LED_G_GPIO_Port, LED_G_Pin, SET);
-  HAL_GPIO_WritePin(LED_B_GPIO_Port, LED_B_Pin, SET);
-
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -105,11 +102,7 @@ int main(void)
 
     /* USER CODE BEGIN 3 */
 	  HAL_GPIO_TogglePin(LED_R_GPIO_Port, LED_R_Pin);
-	  HAL_Delay(2000);
-	  HAL_GPIO_TogglePin(LED_G_GPIO_Port, LED_G_Pin);
-	  HAL_Delay(2000);
-	  HAL_GPIO_TogglePin(LED_B_GPIO_Port, LED_B_Pin);
-	  HAL_Delay(2000);
+	  HAL_Delay(1000);
   }
   /* USER CODE END 3 */
 }
